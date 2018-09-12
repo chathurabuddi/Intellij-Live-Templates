@@ -6,7 +6,7 @@ put `user.xml` in `~/.IntelliJIdea<version>/config/templates`
 
 #### Usage
 
-|abbriviation |context                         |                           |
+|Abbriviation |Context                         |Description                |
 |-------------|--------------------------------|---------------------------|
 |rmp          |JAVA_DECLARATION                |Request Mapping POST       |
 |rpi          |JAVA_DECLARATION                |Request Parameter int      |
