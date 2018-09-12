@@ -18,17 +18,18 @@
   </template>
   <template name="rmp" value="@org.springframework.web.bind.annotation.RequestMapping(value = &quot;/$name$&quot;, method = org&#10;        .springframework.web.bind.annotation.RequestMethod.POST, produces = $mediaType$)&#10;    public java.lang.String $name$($SELECTION$) {&#10;        &#10;    }" description="RequestMapping POST" toReformat="true" toShortenFQNames="true">
     <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
-    <variable name="mediaType" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="mediaType" expression="" defaultValue="&quot;MediaType.APPLICATION_JSON_VALUE&quot;" alwaysStopAt="true" />
     <context>
       <option name="JAVA_DECLARATION" value="true" />
     </context>
   </template>
-  <template name="lg" value="private final static org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger(java.lang.invoke.MethodHandles.lookup().lookupClass());&#10;" description="" toReformat="true" toShortenFQNames="true">
+  <template name="lg" value="private final static org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger($className$.class);&#10;" description="Logger" toReformat="true" toShortenFQNames="true">
+    <variable name="className" expression="" defaultValue="className()" alwaysStopAt="true" />
     <context>
       <option name="JAVA_DECLARATION" value="true" />
     </context>
   </template>
-  <template name="sbdt" value="&lt;dependency&gt;&#10;            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;&#10;            &lt;artifactId&gt;spring-boot-devtools&lt;/artifactId&gt;&#10;            &lt;optional&gt;true&lt;/optional&gt;&#10;        &lt;/dependency&gt;" description="" toReformat="true" toShortenFQNames="true">
+  <template name="sbdt" value="&lt;dependency&gt;&#10;            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;&#10;            &lt;artifactId&gt;spring-boot-devtools&lt;/artifactId&gt;&#10;            &lt;optional&gt;true&lt;/optional&gt;&#10;        &lt;/dependency&gt;" description="Spring Boot Dev Tools" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="MAVEN" value="true" />
       <option name="XML_TEXT" value="true" />
