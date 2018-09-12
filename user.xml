@@ -28,86 +28,10 @@
       <option name="JAVA_DECLARATION" value="true" />
     </context>
   </template>
-  <template name="uf" value="java.io.File $varName$ = new java.io.File($baseDir$ + &quot;/&quot; + java.lang.System&#10;        .currentTimeMillis() + &quot;$extension$&quot;);" description="" toReformat="true" toShortenFQNames="true">
-    <variable name="varName" expression="" defaultValue="&quot;file&quot;" alwaysStopAt="true" />
-    <variable name="baseDir" expression="suggestVariableName()" defaultValue="&quot;location&quot;" alwaysStopAt="true" />
-    <variable name="extension" expression="" defaultValue="&quot;extension&quot;" alwaysStopAt="true" />
-    <context>
-      <option name="JAVA_EXPRESSION" value="true" />
-      <option name="JAVA_STATEMENT" value="true" />
-    </context>
-  </template>
-  <template name="javacv" value="&lt;dependency&gt;&#10;            &lt;groupId&gt;org.bytedeco&lt;/groupId&gt;&#10;            &lt;artifactId&gt;javacv&lt;/artifactId&gt;&#10;            &lt;version&gt;1.1&lt;/version&gt;&#10;        &lt;/dependency&gt;" description="" toReformat="true" toShortenFQNames="true">
+  <template name="sbdt" value="&lt;dependency&gt;&#10;            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;&#10;            &lt;artifactId&gt;spring-boot-devtools&lt;/artifactId&gt;&#10;            &lt;optional&gt;true&lt;/optional&gt;&#10;        &lt;/dependency&gt;" description="" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="MAVEN" value="true" />
       <option name="XML_TEXT" value="true" />
-    </context>
-  </template>
-  <template name="agl" value="&lt;dependency&gt;&#10;            &lt;groupId&gt;com.madgag&lt;/groupId&gt;&#10;            &lt;artifactId&gt;animated-gif-lib&lt;/artifactId&gt;&#10;            &lt;version&gt;1.2&lt;/version&gt;&#10;        &lt;/dependency&gt;" description="" toReformat="true" toShortenFQNames="true">
-    <context>
-      <option name="MAVEN" value="true" />
-      <option name="XML_TEXT" value="true" />
-    </context>
-  </template>
-  <template name="sbdt" value="&lt;dependency&gt;&#10;            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;&#10;            &lt;artifactId&gt;spring-boot-devtools&lt;/artifactId&gt;&#10;            &lt;version&gt;1.3.3.RELEASE&lt;/version&gt;&#10;        &lt;/dependency&gt;" description="" toReformat="true" toShortenFQNames="true">
-    <context>
-      <option name="MAVEN" value="true" />
-      <option name="XML_TEXT" value="true" />
-    </context>
-  </template>
-  <template name="fg" value="org.bytedeco.javacv.FFmpegFrameGrabber $variable$ = new org.bytedeco.javacv.FFmpegFrameGrabber($file$);&#10;$variable$.start();" description="" toReformat="true" toShortenFQNames="true">
-    <variable name="variable" expression="" defaultValue="&quot;frameGrabber&quot;" alwaysStopAt="true" />
-    <variable name="file" expression="" defaultValue="&quot;file&quot;" alwaysStopAt="true" />
-    <context>
-      <option name="JAVA_EXPRESSION" value="true" />
-      <option name="JAVA_STATEMENT" value="true" />
-    </context>
-  </template>
-  <template name="agewr" value="com.madgag.gif.fmsware.AnimatedGifEncoder $variable$ = new com.madgag.gif.fmsware.AnimatedGifEncoder();&#10;&#10;if ($repeat$) {&#10;    $variable$.setRepeat(0);&#10;}&#10;&#10;$variable$.setFrameRate(frameRate);&#10;$variable$.start(output.toString());&#10;return $variable$;" description="" toReformat="true" toShortenFQNames="true">
-    <variable name="variable" expression="" defaultValue="&quot;gifEncoderVar&quot;" alwaysStopAt="true" />
-    <variable name="repeat" expression="" defaultValue="&quot;repeatVar&quot;" alwaysStopAt="true" />
-    <context>
-      <option name="JAVA_EXPRESSION" value="true" />
-      <option name="JAVA_STATEMENT" value="true" />
-    </context>
-  </template>
-  <template name="frNum" value="long $variable$ = java.lang.Math.round($modifier$ * frameGrabber.getFrameRate());" description="" toReformat="true" toShortenFQNames="true">
-    <variable name="variable" expression="" defaultValue="&quot;frame&quot;" alwaysStopAt="true" />
-    <variable name="modifier" expression="" defaultValue="&quot;modifier&quot;" alwaysStopAt="true" />
-    <context>
-      <option name="JAVA_EXPRESSION" value="true" />
-      <option name="JAVA_STATEMENT" value="true" />
-    </context>
-  </template>
-  <template name="fc" value="org.bytedeco.javacv.Java2DFrameConverter $variable$ = new org.bytedeco.javacv.Java2DFrameConverter()" description="" toReformat="true" toShortenFQNames="true">
-    <variable name="variable" expression="" defaultValue="&quot;fc&quot;" alwaysStopAt="true" />
-    <context>
-      <option name="JAVA_EXPRESSION" value="true" />
-      <option name="JAVA_STATEMENT" value="true" />
-    </context>
-  </template>
-  <template name="forl" value="for (long i = $start$; i &lt; $end$; i++) {&#10;    $END$            &#10;}" description="" toReformat="true" toShortenFQNames="true">
-    <variable name="start" expression="" defaultValue="" alwaysStopAt="true" />
-    <variable name="end" expression="" defaultValue="" alwaysStopAt="true" />
-    <context>
-      <option name="JAVA_EXPRESSION" value="true" />
-      <option name="JAVA_STATEMENT" value="true" />
-    </context>
-  </template>
-  <template name="cfti" value="java.awt.image.BufferedImage $imageVar$ = frameConverter.convert($frameGrabberVar$.grabImage());&#10;$gifEncoderVar$.addFrame($imageVar$);" description="" toReformat="true" toShortenFQNames="true">
-    <variable name="imageVar" expression="" defaultValue="&quot;image&quot;" alwaysStopAt="true" />
-    <variable name="frameGrabberVar" expression="" defaultValue="&quot;frameGrabber&quot;" alwaysStopAt="true" />
-    <variable name="gifEncoderVar" expression="" defaultValue="&quot;encoder&quot;" alwaysStopAt="true" />
-    <context>
-      <option name="JAVA_EXPRESSION" value="true" />
-      <option name="JAVA_STATEMENT" value="true" />
-    </context>
-  </template>
-  <template name="drfrb" value="@org.springframework.context.annotation.Bean&#10;    public org.springframework.boot.context.embedded.FilterRegistrationBean &#10;deRegister$params$ ($END$ $filter$ filter) {&#10;        org.springframework.boot.context.embedded.FilterRegistrationBean bean = new org.springframework.boot.context.embedded.FilterRegistrationBean(filter);&#10;        bean.setEnabled(false);&#10;        return bean;&#10;    }" description="" toReformat="false" toShortenFQNames="true">
-    <variable name="filter" expression="" defaultValue="filterClass" alwaysStopAt="true" />
-    <variable name="params" expression="" defaultValue="" alwaysStopAt="true" />
-    <context>
-      <option name="JAVA_DECLARATION" value="true" />
     </context>
   </template>
   <template name="rps" value="@org.springframework.web.bind.annotation.RequestParam(&quot;$name$&quot;) String $name$" description="RequestParam String" toReformat="false" toShortenFQNames="true">
